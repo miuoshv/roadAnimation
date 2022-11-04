@@ -1,0 +1,338 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.sky {
+	position: relative;
+	width: 100%;
+	height: 60vh;
+	background-color: rgb(1, 120, 247);
+	animation: sky 10s linear;
+	animation-iteration-count: infinite;
+}
+
+.sun {
+	position: absolute;
+	left: 5%;
+	top: 10%;
+	width: 50px;
+	height: 50px;
+	background-color: rgb(255, 181, 63);
+	border-radius: 50%;
+	box-shadow: 0px 0px 45px 0px yellow;
+	animation: sun 10s linear forwards;
+	animation-iteration-count: infinite;
+}
+
+.stars {
+	position: absolute;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background-color: white;
+	animation: stars 10s linear;
+	animation-iteration-count: infinite;
+}
+
+.star1 {
+	top: 10%;
+	left: 15%;
+}
+
+.star2 {
+	top: 15%;
+	left: 75%;
+}
+
+.star3 {
+	top: 22%;
+	left: 44%;
+}
+
+.star4 {
+	top: 48%;
+	left: 55%;
+}
+
+.star5 {
+	top: 45%;
+	left: 90%;
+}
+
+.star6 {
+	top: 35%;
+	left: 83%;
+}
+
+.star7 {
+	top: 10%;
+	left: 15%;
+}
+
+.star8 {
+	top: 15%;
+	left: 30%;
+}
+
+.star9 {
+	top: 65%;
+	left: 39%;
+}
+
+.star10 {
+	top: 10%;
+	left: 15%;
+}
+
+.star11 {
+	top: 39%;
+	left: 65%;
+}
+
+.star12 {
+	top: 55%;
+	left: 25%;
+}
+
+.star13 {
+	top: 60%;
+	left: 60%;
+}
+
+.star14 {
+	top: 40%;
+	left: 19%;
+}
+
+.all-mountains {
+	position: relative;
+	left: 50%;
+	top: 60%;
+	width: 300px;
+	height: 200px;
+	animation: mountains 10s linear forwards;
+	animation-iteration-count: infinite;
+}
+
+.mountains {
+	position: absolute;
+	background-color: rgb(69, 77, 69);
+	z-index: 10;
+}
+
+.left-moutain {
+	height: 40px;
+	width: 60px;
+	left: 10%;
+	bottom: 0%;
+	border-top-left-radius: 100%;
+}
+
+.middle-left-mountain {
+	height: 70px;
+	width: 100px;
+	left: 23%;
+	bottom: 0%;
+	border-top-left-radius: 100%;
+}
+.middle-right-mountain {
+	height: 70px;
+	width: 100px;
+	left: 55%;
+	bottom: 0%;
+	border-top-right-radius: 100%;
+}
+
+.right-mountain {
+	height: 40px;
+	width: 60px;
+	left: 75%;
+	bottom: 0%;
+	border-top-right-radius: 100%;
+}
+
+.top-left-mountain {
+	height: 90px;
+	width: 50px;
+	left: 36.5%;
+	bottom: 5%;
+	border-top-left-radius: 100%;
+	background-color: white;
+	z-index: 2;
+}
+
+.top-right-mountain {
+	height: 90px;
+	width: 50px;
+	left: 52.5%;
+	bottom: 5%;
+	border-top-right-radius: 100%;
+	background-color: white;
+	z-index: 2;
+}
+
+.ground {
+	position: relative;
+	height: 40vh;
+	background-color: #874702;
+}
+
+.grass {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 25vh;
+	background-color: rgb(104, 173, 0);
+}
+
+.road {
+	position: absolute;
+	top: 13%;
+	width: 100%;
+	height: 12vh;
+	background-color: grey;
+}
+
+.car {
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	width: 150px;
+	height: 65px;
+	background-color: red;
+	border-top-right-radius: 80%;
+	border-top-left-radius: 75%;
+	animation: car 10s linear;
+	animation-iteration-count: infinite;
+}
+
+.car::after,
+.car::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 50px;
+	height: 30px;
+	background-color: red;
+}
+
+.car::after {
+	right: -35px;
+	border-top-right-radius: 60%;
+}
+
+.car::before {
+	left: -20px;
+	border-top-left-radius: 70%;
+}
+
+.wheel {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background-color: black;
+	border-radius: 50%;
+	border: 2px dashed rgb(90, 88, 88);
+	animation: wheels 10s linear;
+	animation-iteration-count: infinite;
+	z-index: 7;
+}
+
+.front-wheel {
+	left: 90%;
+	bottom: -10%;
+}
+
+.rear-wheel {
+	left: 5%;
+	bottom: -10%;
+}
+
+.window {
+	position: absolute;
+	height: 30px;
+	width: 50px;
+	background-color: lightblue;
+}
+
+.front-window {
+	right: 0%;
+	top: 7%;
+	border-top-right-radius: 100%;
+	z-index: 7;
+}
+
+.rear-window {
+	left: 0%;
+	top: 7%;
+	border-top-left-radius: 90%;
+	z-index: 7;
+}
+
+@keyframes sky {
+	from {
+		background-color: rgb(1, 120, 247);
+	}
+
+	to {
+		background-color: rgb(2, 47, 94);
+	}
+}
+
+@keyframes sun {
+	from {
+		left: 5%;
+		top: 0%;
+	}
+
+	to {
+		left: 5%;
+		top: 100%;
+		box-shadow: 0px 0px 0px 0px yellow;
+	}
+}
+
+@keyframes stars {
+	from {
+		background-color: rgba($color: #ffffff00, $alpha: 0);
+	}
+
+	to {
+		background-color: rgba($color: #ffffff, $alpha: 1);
+		box-shadow: 0px 0px 30px 0px white;
+	}
+}
+
+@keyframes car {
+	from {
+		left: 0%;
+		top: 10%;
+	}
+
+	to {
+		left: 110%;
+		top: 10%;
+	}
+}
+
+@keyframes wheels {
+	from {
+		rotate: 0deg;
+	}
+
+	to {
+		rotate: 360deg;
+	}
+}
+
+@keyframes mountains {
+	from {
+		left: 100%;
+	}
+
+	to {
+		left: -20%;
+	}
+}
